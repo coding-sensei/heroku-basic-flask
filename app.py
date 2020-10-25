@@ -15,7 +15,7 @@ if 'DYNO' in environ:
 class personalCapital(Resource):
     def get(self):
         app.logger.debug('Debug message TODO')
-        api.logger.debug('Debug 2 message TODO')
+        app.logger.info('Debug 2 message TODO')
         account = environ.get("ACCOUNT")
         username = environ.get("USERNAME")
         password = environ.get("PASSWORD")
