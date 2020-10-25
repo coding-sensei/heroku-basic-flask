@@ -2,20 +2,18 @@ from flask import Flask, request
 from datetime import datetime
 from flask_restful import Resource, Api
 from os import environ
-import sys
-import logging
+#import sys
+#import logging
 
 app = Flask(__name__)
 api = Api(app)
 
-if 'DYNO' in environ:
-    app.logger.addHandler(logging.StreamHandler(sys.stdout))
-    app.logger.setLevel(logging.ERROR)
+#if 'DYNO' in environ:
+#    app.logger.addHandler(logging.StreamHandler(sys.stdout))
+#    app.logger.setLevel(logging.ERROR)
 
 class personalCapital(Resource):
     def get(self):
-        app.logger.debug('Debug message TODO')
-        app.logger.info('Debug 2 message TODO')
         print("will this print to the console")
         account = environ.get("ACCOUNT")
         username = environ.get("USERNAME")
