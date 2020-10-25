@@ -16,6 +16,7 @@ class personalCapital(Resource):
     def get(self):
         app.logger.debug('Debug message TODO')
         app.logger.info('Debug 2 message TODO')
+        print("will this print to the console")
         account = environ.get("ACCOUNT")
         username = environ.get("USERNAME")
         password = environ.get("PASSWORD")
