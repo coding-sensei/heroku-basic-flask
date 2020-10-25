@@ -8,7 +8,7 @@ import logging
 app = Flask(__name__)
 api = Api(app)
 
-if 'DYNO' in os.environ:
+if 'DYNO' in environ:
     app.logger.addHandler(logging.StreamHandler(sys.stdout))
     app.logger.setLevel(logging.ERROR)
 
