@@ -22,6 +22,7 @@ class personalCapital(Resource):
 
     def post(self):
         some_json = request.get_json()
+        print(f"POST payload received:\n{some_json}")
         return {"you sent": some_json}, 201
 
 
